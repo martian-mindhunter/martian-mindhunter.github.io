@@ -224,7 +224,17 @@ h1 {
 }
 
 .entry-description {
-    /* padding-left: 1.2em; */
+    padding-left: 1.2em;
+}
+
+.entry-description li {
+    /* padding-left: 10px; */
+    /* margin: 100px; */
+    margin-left: 15px;
+}
+
+.entry-info {
+    padding-left: 1.2em;
 }
 
 .footer {
