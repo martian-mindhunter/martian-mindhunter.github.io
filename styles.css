@@ -18,6 +18,7 @@ body {
     padding: 0;
     width: 100%;
     min-height: 100%;
+    /* background-image:  */
 }
 
 body {
@@ -52,13 +53,13 @@ a:hover {
 }
 
 h1 {
-    margin: 0px;
+    margin: 0;
     margin-bottom: 15px;
 }
 
 /* site elements */
 .container {
-    width: 70%;
+    width: 85%;
     max-width: 1200px;
 
     min-height: calc(100dvh - 20px);
@@ -72,6 +73,7 @@ h1 {
 
     grid-template-columns: 200px minmax(0, 1fr);
     grid-template-rows: 200px minmax(0, 1fr) auto;
+    /* grid-template-rows: 1fr 1fr 1fr; */
 
     grid-template-areas:
         "header header"
@@ -85,10 +87,10 @@ h1 {
     min-width: 0;
     min-height: 0;
 
-    border-radius: 5px;
+    border-radius: 0;
 
-    background-image: url('the-martian.png');
-    background-size: cover;
+    background-image: url('header-correct-size.png');
+    background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -102,6 +104,33 @@ h1 {
     border-radius: 5px;
 
     padding: 5px;
+}
+
+/* .sidebar-image {
+    background-image: url('profile.png');
+    background-size:center;
+    background-position: center;
+    background-repeat: no-repeat;
+    ima
+} */
+
+.sidebar-image {
+    flex: 0 1 33%;
+    min-width: 0;
+
+    border: 1px solid limegreen;
+    padding: 0;
+}
+
+.sidebar-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+.navbar {
+    margin-top: 5px;
 }
 
 .content {
@@ -119,26 +148,83 @@ h1 {
 }
 
 .about {
-    display: flex;
-    align-items: flex-start;
+    display: block;
+    /* align-items: flex-start; */
     gap: 20px;
 }
 
 .about-image {
-    flex: 0 1 33%;
+    /* flex: 0 1 33%; */
     min-width: 0;
 }
 
 .about-image img {
     display: block;
 
-    width: 100%;
+    width: 200px;
     height: auto;
 }
 
 .about-text {
-    flex: 1;
+    /* flex: 1; */
     min-width: 0;
+    display: block;
+}
+
+/* .portfolio {
+    text-align: center;
+} */
+
+.portfolio table {
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 20px 10px;
+}
+
+.portfolio th,
+.portfolio-item-cell,
+.portfolio-desc {
+    width: 100px;
+    max-width: 100px;
+    min-width: 100px;
+    word-wrap: break-word;
+    vertical-align: top;
+}
+
+.portfolio-item-cell img {
+    /* flex: 0 1 33%; */
+    /* min-width: 0; */
+    /* justify-content: center; */
+
+    /* border: 1px solid limegreen; */
+    padding: 0;
+
+    display: block;
+
+    width: 100px;
+    height: auto;
+}
+
+.contact-form {
+    line-height: 2;
+}
+
+.contact-form textarea {
+    field-sizing: content;
+    /* height: 10px; */
+    line-height: normal;
+    min-height: 40%;
+    min-width: 40%;
+    resize: none;
+    height: 150px;
+    max-width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.entry-description {
+    /* padding-left: 1.2em; */
 }
 
 .footer {
@@ -178,9 +264,9 @@ h1 {
         grid-template-columns: 1fr;
 
         grid-template-rows:
-            150px
             auto
             auto
+            1fr
             auto;
 
         grid-template-areas:
@@ -197,6 +283,11 @@ h1 {
 
     .sidebar {
         width: 100%;
+    }
+
+    .sidebar-image {
+        max-width: 100px;
+        margin: 0 auto;
     }
 
     .nav-list {
@@ -304,4 +395,6 @@ h1 {
 
         line-height: 1.3;
     }
+
+    
 }
