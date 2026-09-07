@@ -1,0 +1,307 @@
+/* cool smt font */
+@font-face {
+    font-family: "ZenOldMincho";
+    src: url('/styles/ZenOldMincho-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* baseline */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    padding: 10px;
+
+    font-family: 'MS UI Gothic', 'MS Gothic', sans-serif;
+
+    background-color: #121254;
+    background-image: url('../files/images/bgtest.gif');
+
+    color: oldlace;
+}
+
+/* Link text */
+a {
+    text-decoration: none;
+    color: limegreen;
+    font-weight: bold;
+}
+
+a:visited {
+    text-decoration: none;
+    color: limegreen;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-style: italic;
+    color: limegreen;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 0px;
+    margin-bottom: 15px;
+}
+
+/* site elements */
+.container {
+    width: 70%;
+    max-width: 1200px;
+
+    min-height: calc(100dvh - 20px);
+
+    margin: 0 auto;
+    padding: 10px;
+
+    display: grid;
+
+    gap: 0.4rem;
+
+    grid-template-columns: 200px minmax(0, 1fr);
+    grid-template-rows: 200px minmax(0, 1fr) auto;
+
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+}
+
+.content-header {
+    grid-area: header;
+
+    min-width: 0;
+    min-height: 0;
+
+    border-radius: 5px;
+
+    background-image: url('the-martian.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sidebar {
+    grid-area: sidebar;
+
+    min-width: 0;
+
+    border: 1px solid oldlace;
+    border-radius: 5px;
+
+    padding: 5px;
+}
+
+.content {
+    grid-area: content;
+
+    min-width: 0;
+    min-height: 0;
+
+    border: 1px solid oldlace;
+    border-radius: 0 5px 0 0;
+
+    padding: 15px;
+
+    overflow: auto;
+}
+
+.about {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.about-image {
+    flex: 0 1 33%;
+    min-width: 0;
+}
+
+.about-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.footer {
+    grid-area: footer;
+
+    padding: 8px;
+
+    border: 1px solid oldlace;
+    border-radius: 0 0 5px 5px;
+
+    text-align: center;
+
+    background-color: rgb(169, 169, 214, 0.3);
+
+    overflow-wrap: anywhere;
+}
+
+
+/* iPad screens */
+@media (max-width: 700px) {
+
+    body {
+        padding: 5px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+
+        min-height: calc(100dvh - 10px);
+
+        margin: 0;
+        padding: 5px;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows:
+            150px
+            auto
+            auto
+            auto;
+
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "content"
+            "footer";
+    }
+
+    .content-header {
+        width: 100%;
+        height: 150px;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 15px;
+        margin: 0;
+        padding: 0;
+        list-style-position: inside;
+    }
+
+    .nav-list li {
+        margin: 0;
+    }
+
+    .content {
+        width: 100%;
+        padding: 12px;
+        border-radius: 5px;
+        overflow: visible;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .footer {
+        width: 100%;
+        border-radius: 5px;
+        font-size: 0.85rem;
+    }
+}
+
+
+/* MOBILE VIEWING */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 2px;
+    }
+
+    .container {
+        width: 100%;
+        min-height: calc(100dvh - 4px);
+        padding: 3px;
+        gap: 4px;
+    }
+
+    .content-header {
+        height: 110px;
+    }
+
+    .logo {
+        margin: 5px 0 10px;
+
+        font-size: 1.25rem;
+
+        overflow-wrap: anywhere;
+    }
+
+    .nav-list {
+        gap: 5px 10px;
+
+        font-size: 0.9rem;
+
+        list-style: none;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .page-title {
+        margin-top: 0;
+
+        font-size: 1.5rem;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .footer {
+        padding: 6px;
+
+        font-size: 0.75rem;
+
+        line-height: 1.3;
+    }
+}
