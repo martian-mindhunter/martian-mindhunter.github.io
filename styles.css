@@ -58,6 +58,10 @@ h1 {
     width: fit-content;
 }
 
+h3 {
+
+}
+
 /* site elements */
 .container {
     width: 85%;
@@ -94,6 +98,25 @@ h1 {
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.page-title-container {
+    /* border: 1px solid oldlace; */
+    /* border-radius: 0 0 0 5px; */
+    /* width: 100%; */
+    /* padding: 20px; */
+    /* border-width: 100%; */
+    /* border-color: oldlace; */
+    border-bottom: 1px solid oldlace;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.sign-off {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    font-style: italic;
 }
 
 .sidebar {
@@ -170,6 +193,24 @@ h1 {
     /* flex: 1; */
     min-width: 0;
     display: block;
+}
+
+.post {
+    /* margin-bottom: 50px; */
+    border-bottom-style:dotted;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.post-title {
+    /* vertical-align:middle; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-date {
+    font-style:italic;
 }
 
 /* .portfolio {
@@ -397,6 +438,7 @@ h1 {
         margin-top: 0;
 
         font-size: 1.5rem;
+
     }
 
     .about-image img {
